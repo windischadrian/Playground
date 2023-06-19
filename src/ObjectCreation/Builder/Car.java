@@ -1,6 +1,6 @@
-package DesignPatterns.Builder;
+package ObjectCreation.Builder;
 
-import DesignPatterns.BaseCar;
+import ObjectCreation.BaseCar;
 
 public class Car extends BaseCar {
 

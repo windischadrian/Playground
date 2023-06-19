@@ -1,5 +1,5 @@
-import DesignPatterns.BaseCar;
-import DesignPatterns.Builder.Car;
+import ObjectCreation.BaseCar;
+import ObjectCreation.Builder.Car;
 
 public class Playground {
     public static void main(String[] args) {
@@ -9,9 +9,10 @@ public class Playground {
     }
 
     private static void designPatterns() {
-        Car.Builder reusableBuilder = new DesignPatterns.Builder.Car.Builder("Dacia", "Logan"); //Builders are reusable
+        //Builder
+        Car.Builder reusableBuilder = new ObjectCreation.Builder.Car.Builder("Dacia", "Logan"); //Builders are reusable
 
-        DesignPatterns.Builder.Car carBuilder = new DesignPatterns.Builder.Car.Builder("Volkswagen", "Golf GTI")
+        ObjectCreation.Builder.Car carBuilder = new ObjectCreation.Builder.Car.Builder("Volkswagen", "Golf GTI")
                 .litreage(2.0f)
                 .doorsNr(5)
                 .fuel(BaseCar.FuelType.PETROL)
@@ -20,8 +21,13 @@ public class Playground {
 
         System.out.println(carBuilder.toString());
 
-        DesignPatterns.Javabeans.Car carJavabeans = new DesignPatterns.Javabeans.Car("Audi", "S5");
+        //Java Beans
+        ObjectCreation.Javabeans.Car carJavabeans = new ObjectCreation.Javabeans.Car("Audi", "S5");
         carJavabeans.setDoorsNr(3);
         carJavabeans.setPower(280);
+
+        //Telescopic Constructor
+        ObjectCreation.TelescopicConstructor.Car  carTelescopic = new ObjectCreation.TelescopicConstructor.Car("Porsche", "911");
+        ObjectCreation.TelescopicConstructor.Car  carTelescopic2 = new ObjectCreation.TelescopicConstructor.Car("Porsche", "911", BaseCar.FuelType.HYBRID, 5);
     }
 }

@@ -1,6 +1,6 @@
-package DesignPatterns.TelescopicConstructor;
+package ObjectCreation.TelescopicConstructor;
 
-import DesignPatterns.BaseCar;
+import ObjectCreation.BaseCar;
 
 public class Car extends BaseCar {
 

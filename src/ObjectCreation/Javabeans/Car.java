@@ -1,6 +1,6 @@
-package DesignPatterns.Javabeans;
+package ObjectCreation.Javabeans;
 
-import DesignPatterns.BaseCar;
+import ObjectCreation.BaseCar;
 
 public class Car extends BaseCar {
 

@@ -1,4 +1,4 @@
-package DesignPatterns;
+package ObjectCreation;
 
 public class BaseCar {
     protected String brand;
