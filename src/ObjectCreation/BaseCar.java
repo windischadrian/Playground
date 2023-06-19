@@ -16,8 +16,15 @@ public class BaseCar {
                 "\nmodel: " + model +
                 "\nfuel: " + fuel +
                 "\ndoorsNr: " + doorsNr +
-                "\npower: " + model +
-                "\nlitreage: " + litreage;
+                "\npower: " + power +
+                "\nlitreage: " + litreage +
+                "\n\n\n\n";
     }
 
+    public String getBrand() {
+        return brand;
+    }
+    public String getModel() {
+        return model;
+    }
 }
