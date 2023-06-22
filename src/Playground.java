@@ -52,5 +52,9 @@ public class Playground {
 
         //Works because of the new hashCode
         System.out.println(map.get(new CommonMethods(1, "The String")));
+
+        CommonMethods cm3 = cm.clone();
+        System.out.println(cm3);
+
     }
 }

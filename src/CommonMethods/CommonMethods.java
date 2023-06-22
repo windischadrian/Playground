@@ -2,7 +2,7 @@ package CommonMethods;
 
 import java.util.Objects;
 
-public class CommonMethods {
+public class CommonMethods implements Cloneable{
     private int number;
     private String someString;
 
@@ -26,6 +26,16 @@ public class CommonMethods {
         int result = Integer.hashCode(number);
         result = 31 * result + someString.hashCode();
         return result;
+    }
+
+    //Clone can be used when the class implements the Cloneable interface
+    @Override
+    public CommonMethods clone() {
+        try {
+            return (CommonMethods) super.clone();
+        } catch (CloneNotSupportedException ex) {
+            throw new AssertionError();
+        }
     }
 
     //Good to always override toString method
