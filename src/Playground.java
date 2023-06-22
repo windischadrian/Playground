@@ -1,11 +1,14 @@
+import CommonMethods.CommonMethods;
 import ObjectCreation.BaseCar;
-import ObjectCreation.Builder.Car;
+
+import java.util.HashMap;
 
 public class Playground {
     public static void main(String[] args) {
         System.out.println("Started");
 
-        designPatterns();
+        //designPatterns();
+        commonMethods();
     }
 
     private static void designPatterns() {
@@ -34,5 +37,20 @@ public class Playground {
         //Static Factory
         ObjectCreation.StaticFactory.Car carFactory = ObjectCreation.StaticFactory.Car.from(carTelescopic);
         System.out.println(carFactory);
+    }
+
+    private static void commonMethods() {
+        CommonMethods cm = new CommonMethods(1, "The String");
+        CommonMethods cm2 = new CommonMethods(1, "The String");
+        System.out.println(cm.toString());
+        System.out.println(cm.hashCode());
+        System.out.println(cm2.hashCode());
+        System.out.println(cm.equals(cm2));
+
+        HashMap<CommonMethods, String> map = new HashMap<>();
+        map.put(cm, "CommonMethods object");
+
+        //Works because of the new hashCode
+        System.out.println(map.get(new CommonMethods(1, "The String")));
     }
 }
